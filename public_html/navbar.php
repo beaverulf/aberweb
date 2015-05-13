@@ -9,7 +9,6 @@
 	<li>
 		<form id="connectForm" style="margin-bottom: 0px;">
 			<button class="btn btn-info" type="submit" id="connect"><span class="glyphicon glyphicon-earphone" aria-hidden="false"></span>     Connect</button>
-			
 		</form>
 
 		

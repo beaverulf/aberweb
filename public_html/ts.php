@@ -65,12 +65,15 @@
                 return false;
             });
             $('#sendForm').on('submit', function() {
-                /*var message = $('#message').val();
+                var message = $('#message').val();
                 ws.send(message);
-                var byteArray = new Uint8Array(arrayBuffer);
+/*            
+			var byteArray = new Uint8Array(arrayBuffer);
                 byteArray = 255;
-                $('#log').append('<li>sended: <span class="badge">' + byteArray + '</span></li>');
-                */
+				*/
+                $('#log').append('<li>sended: <span class="badge">' + message + '</span></li>');
+                
+				/*
                 var buffer = new Uint8Array(2);
                 buffer[0] = 127;
                 buffer[1] = 127;
@@ -80,7 +83,7 @@
                     $('#log').append('<li>sended: <span class="badge">' + buffer[1] + '</span></li>');
                 }, 3000);
                 
-
+*/
             
                 return false;
             });

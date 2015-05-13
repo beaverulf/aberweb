@@ -36,7 +36,7 @@ function clearCanvas() {
 }
 
 function keyEvent(e) {
-	if (controller == null) {
+	if (controller == null && !$('#prompt').is(':focus') ) {
 		switch (e.keyCode) {
 		case backwardsKeyCode:
 			if (currentY < 1.0) {

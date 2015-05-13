@@ -8,8 +8,8 @@ $(document).ready(function() {
 		
 		 ws.onopen = function() {
 			$('#console-content').append('<br><span class="badge badge-success">Websocket opened</span>');
-			$('#commandline').removeAttr('disabled');
-			$('#commandline').removeAttr('placeholder');
+			$('#prompt').removeAttr('disabled');
+			$('#prompt').removeAttr('placeholder');
 
 		};
 		
@@ -30,6 +30,33 @@ $(document).ready(function() {
 		$('#console-content').append('<br><span class="badge badge-danger"> Disconnected</span>');
 		return false;
 	});
+	
+	  $('#commandLine').on('submit', function() {
+			var message = $('#prompt').val();
+			ws.send(message);
+			
+			/*
+			var byteArray = new Uint8Array(arrayBuffer);
+			byteArray = 255;
+			$('#log').append('<li>sended: <span class="badge">' + byteArray + '</span></li>');
+		   
+			var buffer = new Uint8Array(2);
+			buffer[0] = 127;
+			buffer[1] = 127;
+			ws.send(buffer);
+			 */
+			
+			
+			/*
+			setInterval(function () {
+				$('#log').append('<li>sended: <span class="badge">' + buffer[0] + '</span></li>');
+				$('#log').append('<li>sended: <span class="badge">' + buffer[1] + '</span></li>');
+			}, 3000);
+			*/
+
+		
+			return false;
+            });
 });
 	
 

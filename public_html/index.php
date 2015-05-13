@@ -33,8 +33,10 @@ sec_session_start();
 			<tr>
 				<td>
 				<script src="js/gamepad.js"></script>
-				<canvas id="steeringCanvas" width="400" height="300" style="background-color: #000000;"></canvas>
+				<div id="gamecanvas" disabled="disabled" >
+					<canvas id="steeringCanvas"  width="400" height="300" style="background-color: #000000;"></canvas>
 					<!--<p id="controlsInfo">Steer with WASD</p>-->
+				</div>
 					<br>
 
 					<div id="console">
@@ -47,7 +49,10 @@ printIp();
 
 						</div>
 					</div>
-							<input class="form-control" disabled="disabled" type="text" id="commandline" placeholder="Disconnected"  style="width: 400"/>
+						<form id="commandLine">
+							<input class="form-control" disabled="disabled" type="text" id="prompt" placeholder="Disconnected"  style="width: 400"/>
+							<input type="submit" style="display: none;" />
+						</form>
 					</td>
 					<td>
 						<embed 
