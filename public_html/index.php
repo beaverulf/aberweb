@@ -32,31 +32,23 @@ sec_session_start();
 		<table>
 			<tr>
 				<td>
-				
-			
 				<script src="js/gamepad.js"></script>
 				<canvas id="steeringCanvas" width="400" height="300" style="background-color: #000000;"></canvas>
 					<!--<p id="controlsInfo">Steer with WASD</p>-->
 					<br>
-				
+
 					<div id="console">
 						<div id="console-content">
-							<?php 
-								printConn();
-								echo "<br>Boat IP address: ";
-								printIp();
-							?>
-							
+<?php 
+printConn();
+echo "<br>Boat IP address: ";
+printIp();
+?>
+
 						</div>
-		
-			
-		
 					</div>
 							<input class="form-control" disabled="disabled" type="text" id="commandline" placeholder="Disconnected"  style="width: 400"/>
-
-					
 					</td>
-
 					<td>
 						<embed 
 							type="application/x-vlc-plugin" 
@@ -82,6 +74,4 @@ sec_session_start();
 <?php endif; ?>
 
 </body>
-
 </html>
-

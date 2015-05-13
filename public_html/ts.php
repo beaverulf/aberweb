@@ -75,8 +75,12 @@
                 buffer[0] = 127;
                 buffer[1] = 127;
                 ws.send(buffer);
-                $('#log').append('<li>sended: <span class="badge">' + buffer[0] + '</span></li>');
-                $('#log').append('<li>sended: <span class="badge">' + buffer[1] + '</span></li>');
+                setInterval(function () {
+                    $('#log').append('<li>sended: <span class="badge">' + buffer[0] + '</span></li>');
+                    $('#log').append('<li>sended: <span class="badge">' + buffer[1] + '</span></li>');
+                }, 3000);
+                
+
             
                 return false;
             });
